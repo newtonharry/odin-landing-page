@@ -1,36 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@500&display=swap");
+/* Make the whole page flex column wise, creating 4 sections to position vertically */
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Oswald", sans-serif;
 }
 
-/* Header Styling */
+/* Intro display positioning and styling (holds the header and intro section) */
+.intro {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f2937;
+  color: white;
+  padding: 16px;
+}
+
+/* Header positioning */
 .header {
+  flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 9px;
+  margin-bottom: 50px;
 }
 
-ul {
+/* The header logo */
+.header > p {
+  font-size: 24px;
+  color: F9FAF8;
+}
+
+/* header items to the right of the header logo */
+.header > ul {
   display: flex;
   list-style-type: none;
-  gap: 16px;
+  gap: 42px;
   margin: 0px;
   padding: 0px;
 }
 
-/* Intro Display Styling */
-.intro {
-  display: flex;
-  flex-direction: column;
-  background-color: #1572a1;
-  color: white;
-}
-
+/* Make the display  to flex horizontally to have a text and image section */
 .intro-display {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,10 +47,61 @@ ul {
 }
 
 .intro-display-text {
-  width: 300px;
+  width: 450px;
 }
 
 .intro-display-text > h1 {
-  font-size: 40px;
-  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  font-weight: bolder;
+  color: #f9faf8;
+}
+
+.intro-display-text > p,
+.header > ul {
+  font-size: 18px;
+  color: #e5e7eb;
+}
+
+.intro-display > img {
+  width: 500px;
+}
+
+button {
+  background-color: #3882f6;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #e5e7eb;
+  border: 0px;
+  width: 150px;
+}
+
+.random-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bolder;
+  color: #1f2937;
+}
+
+.illustrations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.card {
+  border: 3px solid blue;
+  border-radius: 4px;
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.06);
+}
+.card > img {
+  width: 400px;
+  height: 300px;
 }
